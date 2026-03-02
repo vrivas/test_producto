@@ -30,5 +30,11 @@ public class ProductoTest {
         // Compruebo que lanza las excepciones con datos incorrectos
         Throwable exception = assertThrows(IllegalArgumentException.class, () -> new Producto(null, 10));
         assertEquals("Producto: ctor. parametrizado: Nombre no puede ser cadena vacía.", exception.getMessage());
+        exception = assertThrows(IllegalArgumentException.class, () -> new Producto("", 10));
+        assertEquals("Producto: ctor. parametrizado: Nombre no puede ser cadena vacía.", exception.getMessage());
+
+        exception = assertThrows(IllegalArgumentException.class, () -> new Producto("Zapato", -10));
+        assertEquals("Producto: ctor. parametrizado: Precio no puede ser un número negativo.", exception.getMessage());
+
     }
 }

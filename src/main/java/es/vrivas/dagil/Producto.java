@@ -26,6 +26,11 @@ public class Producto {
         if (nombre == "" || nombre == null) {
             throw new IllegalArgumentException("Producto: ctor. parametrizado: Nombre no puede ser cadena vacía.");
         }
+
+        if (precio < 0) {
+            throw new IllegalArgumentException(
+                    "Producto: ctor. parametrizado: Precio no puede ser un número negativo.");
+        }
         this.nombre = nombre;
         this.precio = precio;
     }
