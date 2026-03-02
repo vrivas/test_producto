@@ -12,4 +12,9 @@ public class ProductoTest {
     public void ConstructorPorDefecto() {
         new Producto();
     }
+
+    @Test
+    public void ConstructorParametrizado() {
+        new Producto("Camiseta", 23.50);
+    }
 }
