@@ -10,7 +10,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class ProductoTest {
     @Test
     public void ConstructorPorDefecto() {
+        // Compruebo que se ejecuta el constructor.
         new Producto();
+        // Compruebo que se asignan los datos por defecto.
+        assertEquals(null, (new Producto()).getNombre());
+        assertEquals(0, (new Producto()).getPrecio());
     }
 
     @Test
