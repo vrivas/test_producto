@@ -15,6 +15,11 @@ public class ProductoTest {
 
     @Test
     public void ConstructorParametrizado() {
+        // Compruebo que se ejecuta el contructor.
         new Producto("Camiseta", 23.50);
+
+        // Compruebo que se asignan los datos indicados.
+        assertEquals("Camiseta", (new Producto("Camiseta", 23.50)).getNombre());
+
     }
 }
