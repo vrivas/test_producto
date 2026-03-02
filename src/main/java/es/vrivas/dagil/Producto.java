@@ -6,6 +6,9 @@ package es.vrivas.dagil;
 */
 public class Producto {
 
+    String nombre; ///<Nombre del producto.
+    double precio; ///<Precio del producto.
+
     /**
      * Constructor parametrizado.
      * @param nombre Nombre del nuevo artículo.
@@ -13,7 +16,7 @@ public class Producto {
      * @pre El nombre no puede ser la cadena vacía.
      * @pre El precio no puede ser negativo.
      */
-    public Producto(final String nombre, final float precio) {
+    public Producto(final String nombre, final double precio) {
         this.nombre = nombre;
         this.precio = precio;
     }
