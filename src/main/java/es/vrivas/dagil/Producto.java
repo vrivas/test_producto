@@ -19,10 +19,13 @@ public class Producto {
      * Constructor parametrizado.
      * @param nombre Nombre del nuevo artículo.
      * @param precio Precio del nuevo artículo
-     * @pre El nombre no puede ser la cadena vacía.
-     * @pre El precio no puede ser negativo.
+     * @throws  IllegalArgumentException El nombre no puede ser la cadena vacía.
+     * @throws  IllegalArgumentException El precio no puede ser negativo.
      */
-    public Producto(final String nombre, final double precio) {
+    public Producto(final String nombre, final double precio) throws IllegalArgumentException {
+        if (nombre == "" || nombre == null) {
+            throw new IllegalArgumentException("Producto: ctor. parametrizado: Nombre no puede ser cadena vacía.");
+        }
         this.nombre = nombre;
         this.precio = precio;
     }
