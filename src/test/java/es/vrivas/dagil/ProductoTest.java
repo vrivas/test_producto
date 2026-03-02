@@ -20,6 +20,7 @@ public class ProductoTest {
 
         // Compruebo que se asignan los datos indicados.
         assertEquals("Camiseta", (new Producto("Camiseta", 23.50)).getNombre());
+        assertEquals(23.50, (new Producto("Camiseta", 23.50)).getPrecio());
 
     }
 }

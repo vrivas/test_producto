@@ -34,4 +34,11 @@ public class Producto {
         return nombre;
     }
 
+    /**
+     * Devuelve el valor de la propiedad precio.
+     */
+    final public double getPrecio() {
+        return precio;
+    }
+
 }
