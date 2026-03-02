@@ -10,6 +10,12 @@ public class Producto {
     double precio; ///<Precio del producto.
 
     /**
+     * Constructor por defecto.
+     */
+    public Producto() {
+    }
+
+    /**
      * Constructor parametrizado.
      * @param nombre Nombre del nuevo artículo.
      * @param precio Precio del nuevo artículo
