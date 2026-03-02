@@ -26,4 +26,12 @@ public class Producto {
         this.nombre = nombre;
         this.precio = precio;
     }
+
+    /**
+     * Devuelve el valor de la propiedad nombre.
+     */
+    final public String getNombre() {
+        return nombre;
+    }
+
 }
