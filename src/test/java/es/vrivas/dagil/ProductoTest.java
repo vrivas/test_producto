@@ -8,5 +8,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
  * Tests para la clase ProductoTest
  */
 public class ProductoTest {
-
+    @Test
+    public void ConstructorPorDefecto() {
+        new Producto();
+    }
 }
