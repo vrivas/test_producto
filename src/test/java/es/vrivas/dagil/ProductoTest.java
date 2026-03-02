@@ -31,13 +31,33 @@ public class ProductoTest {
     @Test
     public void ExcepcionesConstructorParametrizado() {
         // Compruebo que lanza las excepciones con datos incorrectos
-        Throwable exception = assertThrows(IllegalArgumentException.class, () -> new Producto(null, 10));
+        Throwable exception = assertThrows(IllegalArgumentException.class, () -> {
+            new Producto(null, 10);
+        });
         assertEquals("Producto: ctor. parametrizado: Nombre no puede ser cadena vacía.", exception.getMessage());
-        exception = assertThrows(IllegalArgumentException.class, () -> new Producto("", 10));
+        exception = assertThrows(IllegalArgumentException.class, () -> {
+            new Producto("", 10);
+        });
         assertEquals("Producto: ctor. parametrizado: Nombre no puede ser cadena vacía.", exception.getMessage());
 
-        exception = assertThrows(IllegalArgumentException.class, () -> new Producto("Zapato", -10));
+        exception = assertThrows(IllegalArgumentException.class, () -> {
+            new Producto("Zapato", -10);
+        });
         assertEquals("Producto: ctor. parametrizado: Precio no puede ser un número negativo.", exception.getMessage());
     }
 
+    @Test
+    public void OtrasFormasDeComprobarLasExcepciones() {
+        // Compruebo que lanza las excepciones con datos incorrectos
+        assertThrows(IllegalArgumentException.class, () -> {
+            new Producto(null, 10);
+        });
+        assertThrows(IllegalArgumentException.class, () -> {
+            new Producto("", 10);
+        });
+        assertThrows(IllegalArgumentException.class, () -> {
+            new Producto("Zapato", -10);
+        });
+
+    }
 }
